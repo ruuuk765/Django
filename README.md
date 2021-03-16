@@ -55,11 +55,11 @@ docker-compose logs サービス名
 
 ## Django
 * mysite直下のディレクトリで触るファイルアは二つだけ
-    settings.py
-        全体設定ファイル
-    urls.py
-        URLの設定ファイル
+    * settings.py
+        * 全体設定ファイル
+    * urls.py
+        * URLの設定ファイル
 
 * プロジェクトにはアプリが最低1つ必要
-    manage.pyがあるディレクトリで「python3 manage.py startapp アプリ名」
-    アプリを作るとsettings.pyに登録する必要がある
+    * manage.pyがあるディレクトリで「python3 manage.py startapp アプリ名」
+    * アプリを作るとsettings.pyに登録する必要がある
