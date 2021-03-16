@@ -49,4 +49,17 @@ docker-compose stop
 docker-compose down --rmi all --volumes --remove-orphans
     スーパー全削除
 
-------------------------------
+docker-compose logs サービス名
+    コンテナのログが表示される、サービスを付けない場合、全コンテナのログが表示
+
+
+## Django
+* mysite直下のディレクトリで触るファイルアは二つだけ
+    settings.py
+        全体設定ファイル
+    urls.py
+        URLの設定ファイル
+
+* プロジェクトにはアプリが最低1つ必要
+    manage.pyがあるディレクトリで「python3 manage.py startapp アプリ名」
+    アプリを作るとsettings.pyに登録する必要がある
