@@ -63,3 +63,7 @@ docker-compose logs サービス名
 * プロジェクトにはアプリが最低1つ必要
     * manage.pyがあるディレクトリで「python3 manage.py startapp アプリ名」
     * アプリを作るとsettings.pyに登録する必要がある
+
+
+## .gitignore反映されない
+$ git rm -r --cached . //ファイル全体キャッシュ削除

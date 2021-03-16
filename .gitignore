@@ -3,3 +3,4 @@ docker/pgadmin4
 __pycache__/
 *.py[cod]
 *$py.class
+source/mysite/__pycache__
