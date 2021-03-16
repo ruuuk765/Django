@@ -1,2 +1,5 @@
 docker/volumes
 docker/pgadmin4
+__pycache__/
+*.py[cod]
+*$py.class

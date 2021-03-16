@@ -7,6 +7,7 @@ services: #複数のコンテナの詳細をservicesからネストさせて記�
     build: ./docker/django # 「Dockerfile」があるディレクトリを指定
     command: # コンテナ起動(docker-compose up -d)後に入力されるコマンドを設定
       bash -c 'pip3 install -r requirements.txt &&
+      python3 manage.py migrate &&
       python3 manage.py runserver 0.0.0.0:80'
     volumes: # データを永続化させる場合の設定。「ホスト:コンテナ」でパスを記載
       - ./source:/code
