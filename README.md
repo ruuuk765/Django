@@ -1,25 +1,25 @@
 ## 接続情報
 
 ### django
-| 名前 | 値 |
-| ---- | ---- |
-| URL | http://localhost |
+| 名前 | 値               |
+| ---- | ----             |
+| URL  | http://localhost |
 
 ### Postgres
-| 名前 | 値 |
-| ---- | ---- |
-| Hostname | postgres |
-| User | postgres_user | 
-| Pass | postgres_pass |
-| 初期DB | postgres | 
+| 名前     | 値            |
+| ----     | ----          |
+| Hostname | postgres      |
+| User     | postgres_user | 
+| Pass     | postgres_pass |
+| 初期DB   | postgres      | 
 
 ### pgAdmin
-| 名前 | 値 |
-| ---- | ---- |
-| URL  | http://localhost:8000 |
-| Hostname | pgadmin4 |
-| User | pgadmin_user | 
-| Pass | pgadmin_pass |
+| 名前     | 値                    |
+| ----     | ----                  |
+| URL      | http://localhost:8000 |
+| Hostname | pgadmin4              |
+| User     | pgadmin_user          | 
+| Pass     | pgadmin_pass          |
 
 
 
