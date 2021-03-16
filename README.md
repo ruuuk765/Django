@@ -2,12 +2,12 @@
 
 ### django
 | 名前 | 値               |
-| ---- | ----             |
+| ---- | ---------------- |
 | URL  | http://localhost |
 
 ### Postgres
 | 名前     | 値            |
-| ----     | ----          |
+| -------- | ------------- |
 | Hostname | postgres      |
 | User     | postgres_user | 
 | Pass     | postgres_pass |
@@ -15,7 +15,7 @@
 
 ### pgAdmin
 | 名前     | 値                    |
-| ----     | ----                  |
+| -------- | --------------------- |
 | URL      | http://localhost:8000 |
 | Hostname | pgadmin4              |
 | User     | pgadmin_user          | 
