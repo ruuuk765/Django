@@ -64,6 +64,7 @@ docker-compose logs サービス名
     * manage.pyがあるディレクトリで「python3 manage.py startapp アプリ名」
     * アプリを作るとsettings.pyに登録する必要がある
 
+<<<<<<< HEAD
 ## MEMO
 * FTPサーバーもDockerで作れる、用途は今のところ思いつかない
 * docker-compose stop は個別にコンテナを止めるときに使う
@@ -72,3 +73,8 @@ docker-compose logs サービス名
 * restartもttyもコンテナが予期せず停止しないようなおまじない
 * depends_on は書かないと環境変数(id、passの設定)ができない？おまじない
 * 
+=======
+
+## .gitignore反映されない
+$ git rm -r --cached . //ファイル全体キャッシュ削除
+>>>>>>> c6fced4d4ff68b163cb5f35a607da310c5374e7f
