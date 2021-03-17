@@ -48,9 +48,11 @@ docker-compose stop
 
 docker-compose down --rmi all --volumes --remove-orphans
     スーパー全削除
+    down前にdocker-compose.ymlファイルを編集した場合、以前のコンテナが残る。「--remove-orphans」はそれも削除する
 
 docker-compose logs サービス名
     コンテナのログが表示される、サービスを付けない場合、全コンテナのログが表示
+    VSCodeのDockerの拡張機能をインストールすると、コンテナ右クリック→「View Logs」で見れる
 
 
 ## Django
