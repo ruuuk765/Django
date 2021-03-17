@@ -1,18 +1,17 @@
 version: "3" #docker-composeのバージョンを指定
-
 services: #複数のコンテナの詳細をservicesからネストさせて記述する
 
   django: # サービス名(自由な名前OK)
     container_name: django # コンテナ名(自由な名前OK)
     build: ./docker/django # 「Dockerfile」があるディレクトリを指定
-    command: # コンテナ起動(docker-compose up -d)後に入力されるコマンドを設定
+    ports: # ホストとコンテナーのポート番号の対応付け。「ホスト:コンテナ」の順で記載
+      - 80:80
+    volumes: # データを永続化させる場合の設定。「ホスト:コンテナ」の順でパスを記載
+      - ./source:/code
+    command: # コンテナ生成＆起動(docker-compose up -d)時に入力されるコマンドを設定
       bash -c 'pip3 install -r requirements.txt &&
       python3 manage.py migrate &&
       python3 manage.py runserver 0.0.0.0:80'
-    volumes: # データを永続化させる場合の設定。「ホスト:コンテナ」でパスを記載
-      - ./source:/code
-    ports: # 開放するポートを指定。「ホスト:コンテナ」でポートを記載
-      - 80:80
     depends_on: # コンテナの作成順序と依存関係
       - postgres
     restart: always # コンテナ停止時に常に再起動?
@@ -21,19 +20,19 @@ services: #複数のコンテナの詳細をservicesからネストさせて記�
     container_name: postgres
     build:
       context: ./docker/postgres
-    tty: true # ポート待受してないコンテナが停止するのを阻止する?
-    hostname: postgres
     ports:
       - 5432:5432
+    volumes:
+      - ./docker/volumes/postgres:/var/lib/postgresql/data
+    hostname: postgres
     environment:  # 環境変数
       POSTGRES_USER: postgres_user
       POSTGRES_PASSWORD: postgres_pass
       POSTGRES_DB: postgres
       POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
       TZ: "Asia/Tokyo"
+    tty: true # ポート待受してないコンテナが停止するのを阻止する?
     restart: always
-    volumes:
-      - ./docker/volumes/postgres:/var/lib/postgresql/data
 
   pgadmin4:
     image: dpage/pgadmin4
@@ -42,10 +41,10 @@ services: #複数のコンテナの詳細をservicesからネストさせて記�
       - 8000:80
     volumes:
       - ./docker/pgadmin4:/var/lib/pgadmin
+    hostname: pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: pgadmin_user
       PGADMIN_DEFAULT_PASSWORD: pgadmin_pass
-    hostname: pgadmin4
     depends_on:
       - postgres
     restart: always

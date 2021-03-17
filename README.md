@@ -63,3 +63,12 @@ docker-compose logs サービス名
 * プロジェクトにはアプリが最低1つ必要
     * manage.pyがあるディレクトリで「python3 manage.py startapp アプリ名」
     * アプリを作るとsettings.pyに登録する必要がある
+
+## MEMO
+* FTPサーバーもDockerで作れる、用途は今のところ思いつかない
+* docker-compose stop は個別にコンテナを止めるときに使う
+    * 共有コンテナでpostgresとmysqlがあるが、mysqlは使わないなどのときstop
+* ファイル共有は今だ謎、COPYもMKDIRもできるらしいが要検証
+* restartもttyもコンテナが予期せず停止しないようなおまじない
+* depends_on は書かないと環境変数(id、passの設定)ができない？おまじない
+* 
