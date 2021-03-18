@@ -53,7 +53,7 @@ docker-compose down --rmi all --volumes --remove-orphans
 docker-compose logs サービス名
     コンテナのログが表示される、サービスを付けない場合、全コンテナのログが表示
     VSCodeのDockerの拡張機能をインストールすると、コンテナ右クリック→「View Logs」で見れる
-
+    「logs -f」を付けるとリアルタイムでログが表示される(followの略)
 
 ## Django
 * mysite直下のディレクトリで触るファイルアは二つだけ

@@ -1,0 +1,28 @@
+*{
+  text-decoration: none;
+}
+body{
+  margin: 0 20%;
+  background-color: #fff;
+  /* box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%); */
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+nav{
+  border: 1px solid #ccc;
+  height: 40px;
+  width: 15%;
+
+  /* flexboxを使った上下中央 */
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+}
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+}
