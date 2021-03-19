@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from django.db import connection
 from gandhara.models import Users
 
 class IndexView(TemplateView):

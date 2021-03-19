@@ -70,6 +70,8 @@ docker-compose logs サービス名
 * python3 manage.py inspectdb
     * 既存DBからmodels.pyの書き方がみれる
 
+* [migrateとmakemigrations](https://qiita.com/frosty/items/8c715a53d7920c9cd1eb)
+
 
 ## Djangoモデル
 * python3 manage.py inspectdb

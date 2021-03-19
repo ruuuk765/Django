@@ -10,7 +10,9 @@ services: #複数のコンテナの詳細をservicesからネストさせて記�
       - ./source:/code
     command: # コンテナ生成＆起動(docker-compose up -d)時に入力されるコマンドを設定
       bash -c 'pip3 install -r requirements.txt &&
-      python3 manage.py migrate &&
+      python3 manage.py migrate --fake gandhara zero &&
+      python3 manage.py makemigrations &&
+      python3 manage.py migrate --fake &&
       python3 manage.py runserver 0.0.0.0:80'
     depends_on: # コンテナの作成順序と依存関係
       - postgres

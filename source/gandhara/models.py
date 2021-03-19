@@ -1,19 +1,18 @@
 from django.db import models
+from django.utils import timezone
 
 class Job(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=64, blank=True, null=True)
+    name = models.CharField(max_length=64, blank=True, null=False, default='DEFAULT VALUE')
 
-    class Meta:
-        managed = False
-        db_table = 'job'
+    def __str__(self):
+        return self.name
 
 
 class Users(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=64, blank=True, null=True)
-    job = models.ForeignKey(Job, models.DO_NOTHING, blank=True, null=True)
+    name = models.CharField(max_length=64, blank=False, null=False, default='DEFAULT VALUE')
+    job = models.ForeignKey(Job, on_delete=models.PROTECT, null=False, default='DEFAULT VALUE')
+    created = models.DateTimeField(default=timezone.now, editable=False)
+    updated = models.DateTimeField(auto_now=True, editable=False)
 
-    class Meta:
-        managed = False
-        db_table = 'users'
+    def __str__(self):
+        return self.name
