@@ -1,8 +1,20 @@
 {% extends "base.html"%}
 
 {% block main %}
-  <h2>ホーム</h2>
+<h2>ホーム</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>名前</th>
+    <th>職業</th>
+  </tr>
   {% for user in users %}
-    <li>{{ user }}</li>
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.job.name }}</td>
+    </tr>
   {% endfor %}
+</table>
+
 {% endblock %}

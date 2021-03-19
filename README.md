@@ -67,6 +67,23 @@ docker-compose logs サービス名
 * プロジェクトにはアプリが最低1つ必要
     * manage.pyがあるディレクトリで「python3 manage.py startapp アプリ名」
     * アプリを作るとsettings.pyに登録する必要がある
+* python3 manage.py inspectdb
+    * 既存DBからmodels.pyの書き方がみれる
+
+
+## Djangoモデル
+* python3 manage.py inspectdb
+    * 既存DBからmodels.pyの書き方がみれる
+
+* users = Users.objects.all().order_by('id')
+    * 全件取得
+    *.order_by('-id')で降順、または.order_by('id').reverse()
+    * 1件のみはUsers.objects.all().order_by('id').first()
+
+* users = Users.objects.raw('SELECT * FROM Users WHERE id = %s', str(1))
+    * WHERE文、Users.objects.get(id=2)とも
+
+
 
 ## .gitignore反映されない
 $ git rm -r --cached . //ファイル全体キャッシュ削除

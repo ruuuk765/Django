@@ -1,5 +1,7 @@
 *{
   text-decoration: none;
+  padding:0;
+  margin:0;
 }
 body{
   margin: 0 20%;
@@ -11,9 +13,10 @@ body{
 }
 
 nav{
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   height: 40px;
   width: 15%;
+  margin-bottom: 15px;
 
   /* flexboxを使った上下中央 */
   display: flex;
@@ -25,4 +28,18 @@ nav{
 footer{
   position: absolute;
   bottom: 0;
+}
+
+table{
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table th, table td {
+  border: solid 1px #000;
+  padding: 5px 10px;
+  text-align: center;
+}
+table th{
+  color: #0051ff;
+  background: #e5ebff;
 }

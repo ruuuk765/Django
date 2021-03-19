@@ -1,19 +1,14 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.db import connection
-
+from gandhara.models import Users
 
 class IndexView(TemplateView):
     template_name = 'index.html'
 
     def get_context_data(self):
         ctxt = super().get_context_data()
-        cursor = connection.cursor()
-        cursor.execute("""
-            SELECT * FROM users;
-        """)
-        rows = cursor.fetchall()
-        ctxt['users'] = rows
+        ctxt['users'] = Users.objects.all()
         return ctxt
 
 class AboutView(TemplateView):
