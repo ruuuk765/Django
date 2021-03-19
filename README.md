@@ -95,3 +95,6 @@ $ git rm -r --cached . //ファイル全体キャッシュ削除
 * ファイル共有は今だ謎、COPYもMKDIRもできるらしいが要検証
 * restartもttyもコンテナが予期せず停止しないようなおまじない
 * depends_on は書かないと環境変数(id、passの設定)ができない？おまじない
+* Docker Imagesの実態ファイル
+    * [場所](https://qiita.com/neko_the_shadow/items/ae87b2480345152bc3cb)
+    * [肥大化イメージ削除](https://qiita.com/sarisia/items/5c53c078ab30eb26bc3b)
