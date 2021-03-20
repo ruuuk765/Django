@@ -85,6 +85,9 @@ docker-compose logs サービス名
 * users = Users.objects.raw('SELECT * FROM Users WHERE id = %s', str(1))
     * WHERE文、Users.objects.get(id=2)とも
 
+* Django Migrations
+    * 初期化したい場合は、migrations/*_initial.pyを削除するのと、
+      DBのdjango_migrationsのデータをDelete
 
 
 ## .gitignore反映されない

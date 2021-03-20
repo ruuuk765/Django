@@ -3,4 +3,3 @@ docker/pgadmin4
 __pycache__/
 *.py[cod]
 *$py.class
-*_initial.py
