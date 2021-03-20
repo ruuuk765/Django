@@ -87,7 +87,7 @@ docker-compose logs サービス名
 
 * Django Migrations
     * 初期化したい場合は、migrations/*_initial.pyを削除するのと、
-      DBのdjango_migrationsのデータをDelete
+      DBのdjango_migrationsのapp='gandhara'のデータをDelete
 
 
 ## .gitignore反映されない
