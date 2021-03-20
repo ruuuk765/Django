@@ -88,6 +88,10 @@ docker-compose logs サービス名
 * Django Migrations
     * 初期化したい場合は、migrations/*_initial.pyを削除するのと、
       DBのdjango_migrationsのapp='gandhara'のデータをDelete
+      DELETE FROM django_migrations WHERE app = 'gandhara';
+
+* 初期データ
+    * python3 manage.py loaddata initialData.json を実行
 
 
 ## .gitignore反映されない

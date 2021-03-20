@@ -1,0 +1,50 @@
+[
+  {
+    "model": "gandhara.job",
+    "pk": 1,
+    "fields": {
+      "name": "社長"
+    }
+  },
+  {
+    "model": "gandhara.job",
+    "pk": 2,
+    "fields": {
+      "name": "プログラマー"
+    }
+  },
+  {
+    "model": "gandhara.job",
+    "pk": 3,
+    "fields": {
+      "name": "歯医者"
+    }
+  },
+
+
+
+  {
+    "model": "gandhara.users",
+    "pk": 1,
+    "fields": {
+      "name": "武田",
+      "job_id": 3
+    }
+  },
+  {
+    "model": "gandhara.users",
+    "pk": 2,
+    "fields": {
+      "name": "佐々木",
+      "job_id": 1
+    }
+  },
+  {
+    "model": "gandhara.users",
+    "pk": 3,
+    "fields": {
+      "name": "上杉",
+      "job_id": 2
+    }
+  }
+]
