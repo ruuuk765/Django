@@ -90,6 +90,8 @@ docker-compose logs サービス名
       docker/volumesを削除
 
 * 初期データ
+    * アプリケーションディレクトリ下に「fixtures」ディレクトリ作成、
+      その中に任意の名前のjsonを置く
     * python3 manage.py loaddata initialData.json を実行
 
 
