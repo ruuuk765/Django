@@ -108,3 +108,10 @@ $ git rm -r --cached . //ファイル全体キャッシュ削除
 * Docker Imagesの実態ファイル
     * [場所](https://qiita.com/neko_the_shadow/items/ae87b2480345152bc3cb)
     * [肥大化イメージ削除](https://qiita.com/sarisia/items/5c53c078ab30eb26bc3b)
+
+
+## DB
+* MySQLもPostgresもどっちでもいい
+    * 性能の差は段々無くなって来てるが、LAMP構成が流行ったのでMySQLがちょっと人気
+* NoSQL(MongoDBなど)はデータをJSONで保存する？
+    * 高度な結合操作を必要とするサービスには適していない
